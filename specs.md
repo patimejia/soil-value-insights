@@ -60,3 +60,21 @@ b. Include comments in the code for better understanding and maintainability.
 a. Schedule regular updates to the datasets.
 b. Monitor the system for any data quality issues or changes in the underlying data structures.
 c. Update the analysis and scoring methods as needed, based on new insights or changing market conditions.
+
+### 9. Deployment
+
+### 10. Monitoring
+
+### 11. Maintenance
+
+## Acknowledgements
+
+---
+
+# Actual rough steps
+
+1. Get data, check table , inspect header titles or features to imagine what insight posibilities.
+1. Device theory of how to use data to get insight in a valueable way.
+1. Proppose a hythosis to test. I.e will high valued land have a higher soil quality?
+1. setup file structure, readme, gitignore, requirements.txt, repo on github, description of project, license, etc.
+1. Check excitance of data.
