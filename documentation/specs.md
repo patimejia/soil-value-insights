@@ -1,5 +1,31 @@
 # Tax and Soil Data Integration for High Land Value Identification
 
+## Diagram:
+
+- [Soil-real-value-graph](soil-real-value-graph.md):
+
+```mermaid
+graph TD
+    A(Data Acquisition) --> B(Data Preparation)
+    B --> C(Data Integration)
+    C --> D(Data Analysis)
+    D --> E(Data Output)
+    E --> F(Testing)
+    F --> G(Documentation)
+    D --> H(Maintenance)
+    H --> I(Deployment and Monitoring)
+
+    style A fill:#a6cee3, stroke:#9999,stroke-width:4px;
+    style B fill:#a6cee3,stroke:#9999,stroke-width:4px;
+    style C fill:#a6cee3,stroke:#9999,stroke-width:4px;
+    style D fill:#a6cee3,stroke:#9999,stroke-width:4px;
+    style E fill:#a6cee3,stroke:#a999,stroke-width:4px;
+    style F fill:#a6cee3,stroke:#9999,stroke-width:4px;
+    style G fill:#a6cee3,stroke:#9999,stroke-width:4px;
+    style H fill:#a6cee3,stroke:#9999,stroke-width:4px;
+    style I fill:#a6cee3,stroke:#9999,stroke-width:4px;
+```
+
 ## Objective
 
 To create a test-driven development (TTD) script that identifies areas with high land value by combining soil data with tax information. The script will perform ETL operations, various SQL techniques, and calculations for a robust analysis.
@@ -19,11 +45,20 @@ To create a test-driven development (TTD) script that identifies areas with high
 ### 1. Data Acquisition
 
 a. Obtain soil data.
+
+- 🔰 [04-16-2023] already in a structured format [soilsite_world `CSV`](../assets/datasets/soilsite_full.csv)
+
 b. Obtain tax data (from a reliable source, e.g., local government or paid service).
+
+- 🔰[04-16-2023] [Link to data potential open data sources](open-property-data-resources.md)
+
+> - **Notes**:
+> - For now, all but PropMix appears as a second option. PropMix is a new API that I haven't had a chance to test yet. I'll update this section once I've had a chance to test some of these APIs.
+> - **Propose** to check on **insurance data**, and other data sources that might be useful for this project to find real value of land or property.
 
 ### 2. Data Preparation
 
-a. Load both datasets into a staging area (e.g., a relational database or a data lake).
+a. Load both datasets into a staging area (e.g., a relational database or a data warehouse).
 b. Clean and standardize the datasets (e.g., address missing values, standardize date formats, and remove duplicates).
 c. Create indexes on location identifiers for faster querying and joining.
 
@@ -58,7 +93,10 @@ b. Include comments in the code for better understanding and maintainability.
 ### 8. Maintenance
 
 a. Schedule regular updates to the datasets.
-b. Monitor the system for any data quality issues or changes in the underlying data structures.
+b. Monitor the system for any data quality issues or changes in the underlying data structures. Use dates to track any updates when feasible.. For example,
+
+> "[04-16-2023] Updated Open Soil Datasets:..."
+
 c. Update the analysis and scoring methods as needed, based on new insights or changing market conditions.
 
 ### 9. Deployment
